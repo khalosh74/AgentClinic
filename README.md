@@ -4,7 +4,21 @@
   <img src="media/mainfigure.png" alt="Demonstration of the flow of AgentClinic" style="width: 99%;">
 </p>
 
-## Release
+## About this fork
+
+This repository is a **collaborative extension of [the original AgentClinic benchmark](https://github.com/SamuelSchmidgall/AgentClinic)**. The physician/patient simulation framework, benchmark datasets, and most of the agent infrastructure originated upstream or were developed with other contributors.
+
+### Contributions visible in my commits
+
+- Connected optional SOAP-note generation to the main simulation flow, including CLI options and output handling ([integration commit](https://github.com/khalosh74/AgentClinic/commit/7203cdea)).
+- Updated the SOAP-note agent module/imports and saved-note handling ([SOAP update](https://github.com/khalosh74/AgentClinic/commit/e21fb825)).
+
+The Big Five personality-prompting experiments described below are **collaborative work**, not a claim that I personally developed the entire experimental framework. These changes are best reviewed alongside the commit history.
+
+**Limitations:** The simulated cases and small pilot comparisons are intended for research and exploration, not clinical decision-making. Reported accuracy here is from a small sample and should not be interpreted as evidence of general clinical performance.
+
+---
+## Original project release notes
 - [09/13/2024] 🍓 We release new results and support for o1!
 - [08/17/2024] 🎆 Major updates 🎇
   - 🏥 A new suite of cases (**AgentClinic-MIMIC-IV**), based on real clinical cases from MIMIC-IV (requires approval from https://physionet.org/content/mimiciv/2.2/)! 
@@ -45,7 +59,7 @@ We extended AgentClinic to validate the effects of personality prompting on diag
 - **Linguistic/Sentiment:** POS tagging (NLTK), sentiment (VADER compound score near 0).
 
 #### Results Snapshot
-- **Personality prompting reliably modulated agent outputs.**
+- **In this small pilot, the prompted conditions differed from the baseline; the sample is too small to establish reliable effects.**
     - Baseline agents: 60% accuracy (3/5 correct).
     - Personality-prompted agents: 80% accuracy (4/5 correct).
 - **SOAP-Notes reflected personality traits:**
